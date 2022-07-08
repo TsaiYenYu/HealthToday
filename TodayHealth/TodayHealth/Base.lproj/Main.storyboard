@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodayHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="80"/>
+        </scene>
+        <!--Walking Bar Chart View Controller-->
+        <scene sceneID="kzZ-UQ-q76">
+            <objects>
+                <viewController storyboardIdentifier="WalkingBarChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YwY-CM-Lqd" customClass="WalkingBarChartViewController" customModule="TodayHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wr8-D6-Mny">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9lE-Fv-NcV" userLabel="TimeUnitStackView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayh-VL-O8Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1V-8Q-nkv">
+                                        <rect key="frame" x="143.5" y="0.0" width="127" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xur-oG-K3e">
+                                        <rect key="frame" x="286.5" y="0.0" width="127.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3Vd-td-bzG"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pk-ng-7Vh" userLabel="BottomLineContainerView">
+                                <rect key="frame" x="0.0" y="104" width="414" height="2"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NjM-mc-0NQ">
+                                        <rect key="frame" x="55.5" y="0.0" width="16" height="2"/>
+                                        <color key="backgroundColor" name="MainLightColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="Z0a-C3-4Gc"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zik-tH-W0d">
+                                        <rect key="frame" x="199" y="0.0" width="16" height="2"/>
+                                        <color key="backgroundColor" name="MainLightColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="gyS-be-dKS"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-Pd-9e0">
+                                        <rect key="frame" x="342.5" y="0.0" width="16" height="2"/>
+                                        <color key="backgroundColor" name="MainLightColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="Hla-rH-rw8"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="MoreBKGColor"/>
+                                <constraints>
+                                    <constraint firstItem="zik-tH-W0d" firstAttribute="top" secondItem="6Pk-ng-7Vh" secondAttribute="top" id="4y1-iM-yXW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vtv-Pd-9e0" secondAttribute="bottom" id="9Vh-4F-6eD"/>
+                                    <constraint firstItem="NjM-mc-0NQ" firstAttribute="top" secondItem="6Pk-ng-7Vh" secondAttribute="top" id="KzC-nu-8v9"/>
+                                    <constraint firstAttribute="height" constant="2" id="P3Z-4w-rBd"/>
+                                    <constraint firstAttribute="bottom" secondItem="zik-tH-W0d" secondAttribute="bottom" id="b9o-8c-kEN"/>
+                                    <constraint firstAttribute="bottom" secondItem="NjM-mc-0NQ" secondAttribute="bottom" id="vvL-m2-1d6"/>
+                                    <constraint firstItem="Vtv-Pd-9e0" firstAttribute="top" secondItem="6Pk-ng-7Vh" secondAttribute="top" id="yUx-lo-i75"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lE3-ZK-HMY" customClass="ScrollingStackView" customModule="TodayHealth" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="un6-1k-at2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Pk-ng-7Vh" firstAttribute="leading" secondItem="un6-1k-at2" secondAttribute="leading" id="5rA-oP-YST"/>
+                            <constraint firstItem="9lE-Fv-NcV" firstAttribute="top" secondItem="un6-1k-at2" secondAttribute="top" id="9iH-NZ-aFG"/>
+                            <constraint firstItem="6Pk-ng-7Vh" firstAttribute="top" secondItem="9lE-Fv-NcV" secondAttribute="bottom" id="Bfl-ZS-yct"/>
+                            <constraint firstItem="un6-1k-at2" firstAttribute="trailing" secondItem="6Pk-ng-7Vh" secondAttribute="trailing" id="M43-G3-G7q"/>
+                            <constraint firstItem="lE3-ZK-HMY" firstAttribute="trailing" secondItem="un6-1k-at2" secondAttribute="trailing" id="MGz-MI-TeO"/>
+                            <constraint firstItem="lE3-ZK-HMY" firstAttribute="leading" secondItem="Wr8-D6-Mny" secondAttribute="leading" id="Tf3-rj-ont"/>
+                            <constraint firstItem="NjM-mc-0NQ" firstAttribute="centerX" secondItem="ayh-VL-O8Q" secondAttribute="centerX" id="XfK-Zn-1NR"/>
+                            <constraint firstItem="9lE-Fv-NcV" firstAttribute="leading" secondItem="un6-1k-at2" secondAttribute="leading" id="Zdm-cW-Wi1"/>
+                            <constraint firstItem="zik-tH-W0d" firstAttribute="centerX" secondItem="X1V-8Q-nkv" secondAttribute="centerX" id="bVA-SO-Vf9"/>
+                            <constraint firstItem="un6-1k-at2" firstAttribute="bottom" secondItem="lE3-ZK-HMY" secondAttribute="bottom" id="eDy-c0-irQ"/>
+                            <constraint firstItem="Vtv-Pd-9e0" firstAttribute="centerX" secondItem="xur-oG-K3e" secondAttribute="centerX" id="hhM-xZ-fqY"/>
+                            <constraint firstItem="un6-1k-at2" firstAttribute="trailing" secondItem="9lE-Fv-NcV" secondAttribute="trailing" id="yDq-uy-RYx"/>
+                            <constraint firstItem="lE3-ZK-HMY" firstAttribute="top" secondItem="6Pk-ng-7Vh" secondAttribute="bottom" id="yey-n1-8Cz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dayLabel" destination="ayh-VL-O8Q" id="bFO-FJ-emx"/>
+                        <outlet property="dayUnderLineView" destination="NjM-mc-0NQ" id="1Gy-sg-qZ2"/>
+                        <outlet property="monthLabel" destination="xur-oG-K3e" id="fuW-Zr-7eG"/>
+                        <outlet property="monthUnderLineView" destination="Vtv-Pd-9e0" id="SkY-on-0mw"/>
+                        <outlet property="scrollStackView" destination="lE3-ZK-HMY" id="tQ7-wA-TUh"/>
+                        <outlet property="weekLabel" destination="X1V-8Q-nkv" id="2W6-wX-sSG"/>
+                        <outlet property="weekUnderLineView" destination="zik-tH-W0d" id="aeQ-4n-Bug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7df-nM-DrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MainLightColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MoreBKGColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

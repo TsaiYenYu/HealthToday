@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="TimeSelectView" id="iN0-l3-epB" customClass="TimeSelectView" customModule="TodayHealth" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="580" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6A-xA-9iK" userLabel="IntervalSelectView">
+                    <rect key="frame" x="0.0" y="0.0" width="580" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022/02/20 - 2022/02/26" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYw-ap-OsI">
+                            <rect key="frame" x="220" y="0.0" width="140" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="pP0-7J-nTR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="14"/>
+                            <color key="textColor" name="Eye Button Blue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.backward.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-aF-lVi">
+                            <rect key="frame" x="0.0" y="10.5" width="190" height="26.5"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.forward.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iTG-bk-6pw">
+                            <rect key="frame" x="390" y="10.5" width="190" height="26.5"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="iTG-bk-6pw" secondAttribute="trailing" id="39e-h7-IWi"/>
+                        <constraint firstItem="RYw-ap-OsI" firstAttribute="top" secondItem="s6A-xA-9iK" secondAttribute="top" id="Ldp-YJ-NIS"/>
+                        <constraint firstItem="iTG-bk-6pw" firstAttribute="centerY" secondItem="RYw-ap-OsI" secondAttribute="centerY" id="Msa-Wa-uIh"/>
+                        <constraint firstItem="iTG-bk-6pw" firstAttribute="leading" secondItem="RYw-ap-OsI" secondAttribute="trailing" priority="999" constant="30" id="QBY-27-dW2"/>
+                        <constraint firstAttribute="height" constant="48" id="QlY-QU-eJS"/>
+                        <constraint firstItem="iTG-bk-6pw" firstAttribute="height" secondItem="RYw-ap-OsI" secondAttribute="height" multiplier="0.6" id="X0n-Wm-r9j"/>
+                        <constraint firstItem="4uf-aF-lVi" firstAttribute="centerY" secondItem="RYw-ap-OsI" secondAttribute="centerY" id="bXg-Yv-2iY"/>
+                        <constraint firstItem="4uf-aF-lVi" firstAttribute="height" secondItem="RYw-ap-OsI" secondAttribute="height" multiplier="0.6" id="d1o-sr-eL3"/>
+                        <constraint firstItem="RYw-ap-OsI" firstAttribute="centerX" secondItem="s6A-xA-9iK" secondAttribute="centerX" id="die-qZ-4GU"/>
+                        <constraint firstItem="RYw-ap-OsI" firstAttribute="leading" secondItem="4uf-aF-lVi" secondAttribute="trailing" priority="999" constant="30" id="yCS-mC-4cj"/>
+                        <constraint firstAttribute="bottom" secondItem="RYw-ap-OsI" secondAttribute="bottom" id="yGl-tQ-jwR"/>
+                        <constraint firstItem="4uf-aF-lVi" firstAttribute="leading" secondItem="s6A-xA-9iK" secondAttribute="leading" id="yRU-bK-Jd6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s6A-xA-9iK" secondAttribute="trailing" id="394-wP-MMw"/>
+                <constraint firstItem="s6A-xA-9iK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ToV-JO-nMS"/>
+                <constraint firstItem="s6A-xA-9iK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="h5K-6t-SQx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="displayTimeLabel" destination="RYw-ap-OsI" id="PZN-SW-B2Q"/>
+                <outlet property="lastImageView" destination="4uf-aF-lVi" id="JGm-H6-tr3"/>
+                <outlet property="nextImageView" destination="iTG-bk-6pw" id="M48-na-PhQ"/>
+            </connections>
+            <point key="canvasLocation" x="20.625" y="-248.2394366197183"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
+        <namedColor name="Eye Button Blue">
+            <color red="0.0" green="0.22745098039215686" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
